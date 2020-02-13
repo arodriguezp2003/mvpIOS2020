@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+
+enum ListUserConfig {
+    static let api = "https://reqres.in/api/users?delay=0"
+}

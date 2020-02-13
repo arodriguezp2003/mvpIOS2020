@@ -7,3 +7,17 @@
 //
 
 import Foundation
+import UIKit
+class ListUsersFactory {
+    func getVC() -> UIViewController {
+        let service = ListUserServices()
+        let model = ListUsersModel(service)
+        let presenter = ListUserPresenter(model)
+        let vc = ListUsersViewController()
+        
+        presenter.view = vc
+        vc.presenter = presenter
+        
+        return vc
+    }
+}
